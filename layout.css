@@ -1,0 +1,179 @@
+div.header {
+    width: 100%;
+    background: no-repeat center/100% url("images/Hero.png");
+    height: 380px;
+    padding: 89px 0 107px 0;
+}
+div.footer {
+    width: 100%;
+    height: 90px;
+    background: #559AC8;
+    padding: 24px 0;
+    font-size: 14px;
+    text-align: center;
+}
+div.main {
+    padding: 65px 0 41px 0;
+    min-height:calc(100vh - 614px);
+}
+/* flex */
+div.header, div.footer, div.show, div.card-header>ul, ul.pageNumber, ul.pageNumber>li {
+    display: flex;
+}
+/* column */
+div.header, div.footer {
+    flex-direction: column;
+}
+/* justify between */
+div.header, div.footer, div.show, div.card-header>ul {
+    justify-content: space-between;
+}
+/* border-box */
+div.header, select#selectBar, div.hotZone, div.footer, div.main, div.card-body {
+    box-sizing: border-box;
+}
+/* horizontal center */
+h1 {
+    margin: 0 auto;
+}
+div.selectZone, div.inputBox, div.dashed, div.titleZone {
+    text-align: center;
+}
+/* cursor pointer */
+input[type="button"], ul.pageNumber>li { cursor: pointer; }
+
+/* header */
+h1 {
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 3.89px;
+}
+select#selectBar {
+    width: 452px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 3px solid #fff;
+    border-radius: 3px;
+    padding: 15px 17px 12px 9.5px;
+    font-size: 18px;
+}
+/* hotZone */
+div.hotZone {
+    width: 800px;
+    height: 112px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    padding: 20px 26px;
+    margin: -28px auto;
+    margin-bottom: 50px;
+}
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+div.inputBox {margin-top: 14px;}
+div.inputBox input {
+    padding: 11px 42px;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+.purple {background-color: #8A82CC;}
+.orange {background: #FFA782;}
+.yellow {background: #F5D005;}
+.skyblue {background: #559AC8;}
+/* dashed */
+div.dashed {position: relative;}
+div.dashed hr {
+    width: 900px;
+    border-top: 1px dashed #559AC8;
+}
+div.dashed img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -12px;
+}
+/* main */
+div.titleZone {
+    font-size: 36px;
+    font-weight: bold;
+    color: #8A82CC;
+}
+/* main >> div.show */
+div.show {
+    width: 944px;
+    margin: 34px auto;
+    flex-wrap: wrap;
+}
+div.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    width: 464px;
+    height: 273px;
+    margin-bottom: 36px;
+}
+div.card-header {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+div.card-header>img {
+    width: 100%;
+    position: absolute;
+    top: -25%;
+}
+div.card-header>ul {
+    color: #fff;
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 10px;
+}
+div.card-body {
+    padding: 0 23px;
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+}
+div.card-body>ul>li {
+    margin-top: 10px;
+}
+div.card-body>span {
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+}
+div.card-body img {margin-right: 10px;}
+/* main >> pageNumber */
+ul.pageNumber {
+    font-size: 14px;
+    justify-content: center;
+    color: #4a4a4a;
+}
+ul.pageNumber>li {
+    justify-content: center;
+    align-items: center;
+}
+ul.pageNumber>li.prev {margin-right: 20px;}
+ul.pageNumber>li.next {margin-left: 20px;}
+ul.pageNumber>li.page-item:hover {color: #000;}
+ul.pageNumber>li.page-item-number {
+    margin: 0 4px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+ul.pageNumber>li.page-item-number.active, ul.pageNumber>li.page-item-number:hover{
+    background-color: #28a9ff;
+    font-weight: bold;
+}
+
+a#goTop {
+    position: fixed;
+    right: calc(((100% - 944px) / 2) - 24px);
+    bottom: 210px;
+    display: none;
+}
